@@ -2,7 +2,7 @@ def first_challenge
   contacts = {
     "Jon Snow" => {
       name: "Jon",
-      email: "jon_snow@thewall.we", 
+      email: "jon_snow@thewall.we",
       favorite_icecream_flavors: ["chocolate", "vanilla", "mint chip"],
       knows: nil
     },
@@ -13,10 +13,10 @@ def first_challenge
     }
   }
 
-  #your code here
-
-
-  #remember to return your newly altered contacts hash!
+  contacts["Freddy Mercury"].each do |attribute, info|
+    if attribute == :favorite_icecream_flavors
+      info.delete_if { |e| e == "strawberry" }
+    end 
+  end
   contacts
 end
-
